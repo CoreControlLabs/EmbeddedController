@@ -11,10 +11,14 @@ public:
     void off();
     void toggle();
 
+    // add this method so main.cpp can check LED state
+    bool isOn() const { return _state; }
+
 private:
     uint8_t _pin;
     bool _state;
 };
 
 #endif
+
 
